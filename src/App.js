@@ -1,23 +1,38 @@
-import logo from "./logo.svg";
-import "./App.css";
+import Header from "./components/Header";
+import Layout from "./components/Layout";
+import Footer from "./components/Footer";
 
-function App() {
+import PokemonBg from "./images/bg1.jpg";
+
+//!-- Кстате у меня норм организация кода?
+//!-- Ответ:
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello World, React.js</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header
+        title="Super puper good pokemon game"
+        descr="lorem ipsum dolot koroche riba text..."
+      />
+      <Layout
+        title="Happy text number 1"
+        descr="Word around the office is that you've got a ..."
+        urlBg={PokemonBg}
+      />
+      <Layout
+        title="Happy text number 2"
+        descr="Word around the office is that you've got a ..."
+        colorBg="#eee"
+      />
+      <Layout
+        title="Happy text number 3"
+        descr="Word around the office is that you've got a ..."
+        urlBg={PokemonBg}
+      />
+      <Layout />
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;
